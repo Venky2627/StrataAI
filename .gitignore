@@ -1,0 +1,79 @@
+# ============================================================================
+# STRATAAI .GITIGNORE
+# ============================================================================
+# This file tells Git which files and folders to IGNORE (never track/upload).
+# Why? Some files are:
+#   - Generated (can be recreated, e.g., .venv, __pycache__)
+#   - Secret (API keys in .env would be exposed publicly on GitHub)
+#   - Large (ChromaDB databases, uploaded PDFs don't belong in Git)
+#   - OS-specific (Windows thumbs.db, macOS .DS_Store)
+# ============================================================================
+
+# --- Python ---
+# __pycache__ contains compiled bytecode (.pyc files) that Python generates
+# automatically for performance. They're machine-specific and regenerated on every run.
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Virtual Environment ---
+# The .venv folder contains ~200MB+ of installed packages.
+# It's OS-specific and can be perfectly recreated from requirements.txt.
+# NEVER commit this — it would bloat your repo and break on other machines.
+.venv/
+venv/
+env/
+
+# --- Environment Variables ---
+# .env contains YOUR secret API keys (Gemini, Groq, etc.).
+# If committed, anyone who sees your GitHub repo can steal your keys
+# and run up charges on your accounts. This is the #1 security mistake beginners make.
+.env
+
+# --- IDE Settings ---
+# VS Code stores workspace-specific settings here.
+# These are personal preferences (your font size, your extensions)
+# and shouldn't be forced on collaborators.
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Data Files ---
+# Uploaded PDFs and ChromaDB databases are runtime data, not source code.
+# They can be huge (100MB+ PDFs, GB-sized vector DBs).
+# Each user/deployment should have their own data.
+data/uploads/
+data/chroma_db/
+
+# --- OS Generated ---
+# Operating systems create hidden metadata files.
+# These are useless clutter in a code repository.
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Distribution / Build ---
+# These are generated when you package Python projects for distribution.
+# Not relevant for our Streamlit app, but good practice to exclude.
+dist/
+build/
+*.egg-info/
+
+# --- Jupyter Notebooks ---
+# Checkpoint files are auto-saved backups. The actual .ipynb files
+# should be tracked, but checkpoints are redundant copies.
+.ipynb_checkpoints/
+
+# --- Database ---
+# SQLite database files (Week 9: Progress Tracking).
+# Each deployment has its own database — it's data, not code.
+*.db
+*.sqlite3
+
+# --- Personal Learning Notes ---
+# Markdown files generated during pair programming sessions.
+# These are personal notes, not part of the application code.
+strataai_overview.md
+folder_structure_explained.md
+core_ideas_explained.md

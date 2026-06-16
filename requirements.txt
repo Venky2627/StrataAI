@@ -1,0 +1,26 @@
+# ============================================================================
+# STRATAAI - PYTHON DEPENDENCIES
+# ============================================================================
+# This file lists EVERY package (and its exact version) needed to run StrataAI.
+#
+# WHY EXACT VERSIONS (==)?
+# Using == pins to exact versions. This guarantees that your app works
+# identically on every machine and in every deployment. Without pinning:
+#   - "pip install streamlit" might install 1.58 today and 2.0 tomorrow
+#   - Version 2.0 might have breaking API changes → your app crashes
+#   - Your teammate gets a different version → "works on my machine" bugs
+#
+# HOW TO USE:
+#   pip install -r requirements.txt    ← Installs everything listed here
+#
+# HOW TO UPDATE:
+#   pip install --upgrade streamlit    ← Upgrade a specific package
+#   pip freeze > requirements.txt      ← Re-freeze all versions
+#
+# NOTE: We only list TOP-LEVEL dependencies (the packages WE directly use).
+# Their sub-dependencies are installed automatically by pip.
+# This keeps the file readable and maintainable.
+# ============================================================================
+
+# --- Week 1: Core Framework ---
+streamlit==1.58.0           # Web UI framework — our entire frontend
