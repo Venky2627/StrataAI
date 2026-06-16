@@ -1,102 +1,93 @@
-# 🎓 StrataAI
+# StrataAI
 
-**AI-Powered Study Assistant** — Upload PDFs, chat with your documents, generate quizzes, get explanations, and track your learning progress.
-
----
-
-## 🚀 Features (Roadmap)
-
-- [ ] 📄 PDF Upload & Text Extraction
-- [ ] 🔍 Semantic Search with Embeddings
-- [ ] 💬 Chat with PDFs (RAG)
-- [ ] 📝 AI-Generated Explanations
-- [ ] ❓ Quiz Generation (MCQ + Short Answer)
-- [ ] ✅ Answer Evaluation & Feedback
-- [ ] 📅 Personalized Study Plans
-- [ ] 📊 Progress Tracking & Analytics
-- [ ] 🤖 Agentic Workflows (LangGraph)
+StrataAI is an enterprise-grade, AI-powered study assistant and document comprehension engine. Engineered with an advanced Retrieval-Augmented Generation (RAG) architecture and Agentic workflows, it enables deep analysis, dynamic querying, and automated assessment generation from complex textual data.
 
 ---
 
-## 🛠️ Tech Stack
+## Core Capabilities
 
-| Layer | Technology |
-|-------|-----------|
-| Frontend | Streamlit |
-| Backend | Python |
-| RAG Framework | LangChain |
-| Vector Database | ChromaDB |
-| Embeddings | Sentence Transformers (all-MiniLM-L6-v2) |
-| LLMs | Google Gemini, Groq |
-| Database | SQLite |
-| Agent Framework | LangGraph |
-| Deployment | Streamlit Cloud |
+- **Intelligent Ingestion:** High-fidelity PDF parsing and automated chunking with structural preservation.
+- **Semantic Retrieval:** Vectorized knowledge search utilizing `sentence-transformers` (`all-MiniLM-L6-v2`) and ChromaDB.
+- **Generative Synthesis:** Contextually aware document querying, dynamic quiz generation, and adaptive study planning powered by Gemini and Groq LLMs.
+- **Agentic Evaluation:** Autonomous assessment of user comprehension using LangGraph state-machines.
+- **State Management:** Persistent progress tracking via SQLite.
 
 ---
 
-## 📦 Setup
+## System Architecture
 
-### Prerequisites
-- Python 3.10+
+The application strictly adheres to the Separation of Concerns principle, isolating presentation, configuration, and business logic.
 
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/YOUR_USERNAME/StrataAI.git
-cd StrataAI
-
-# Create virtual environment
-python -m venv .venv
-
-# Activate virtual environment
-# Windows:
-.venv\Scripts\activate
-# macOS/Linux:
-source .venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Set up environment variables
-cp .env.example .env
-# Edit .env with your API keys
-
-# Run the app
-streamlit run app.py
-```
-
----
-
-## 📁 Project Structure
-
-```
+```text
 StrataAI/
-├── app.py                  # Streamlit entry point
-├── config/
-│   └── settings.py         # Centralized configuration
-├── src/
-│   ├── pdf/                # PDF extraction & chunking
-│   ├── embeddings/         # Embedding pipeline
-│   ├── rag/                # RAG chat pipeline
-│   ├── explanations/       # Explanation engine
-│   ├── quiz/               # Quiz generation
-│   ├── evaluation/         # Answer evaluation
-│   ├── study_plan/         # Study plan generator
-│   ├── progress/           # Progress tracking
-│   └── agents/             # LangGraph agents
-├── pages/                  # Streamlit multi-page UI
-├── data/                   # Runtime data
-├── tests/                  # Test suite
-└── utils/                  # Shared utilities
+├── .venv/                  # Isolated Python environment
+├── config/                 # Centralized configuration variables
+├── data/                   # Local storage (Uploads, ChromaDB, SQLite)
+├── pages/                  # Streamlit multi-page interface routing
+├── src/                    # Core business logic
+│   ├── agents/             # LangGraph workflows
+│   ├── embeddings/         # Vectorization services
+│   ├── evaluation/         # Quiz grading engines
+│   ├── explanations/       # Generative simplification logic
+│   ├── pdf/                # Document extraction and parsing
+│   ├── progress/           # SQLite database operations
+│   ├── quiz/               # Assessment generation
+│   ├── rag/                # Retrieval and synthesis orchestration
+│   └── study_plan/         # Automated curriculum generation
+├── tests/                  # Unit and integration tests
+├── utils/                  # Shared helper functions
+├── .env.example            # Environment variable template
+├── .gitignore              # Version control exclusion rules
+├── app.py                  # Application entry point and dashboard
+└── requirements.txt        # Frozen dependency manifests
 ```
 
 ---
 
-## 📄 License
+## Development Roadmap
 
-This project is for educational purposes.
+The development lifecycle is structured across 12 distinct implementation weeks.
+
+- **Phase 1: Foundation (Weeks 1-2)**
+  Environment setup, architectural routing, and document ingestion (PyMuPDF).
+- **Phase 2: Semantic Memory (Weeks 3-4)**
+  Vector database integration, embedding models, and initial LLM synthesis.
+- **Phase 3: Core Features (Weeks 5-7)**
+  Explanation generation, assessment creation, and context-aware grading.
+- **Phase 4: Agentic Systems (Weeks 8-10)**
+  LangGraph integration for autonomous study planning and user progress tracking.
+- **Phase 5: Deployment (Weeks 11-12)**
+  System optimization, refactoring, and cloud deployment via Streamlit Community Cloud.
 
 ---
 
-*Built with ❤️ as a learning project to master AI engineering.*
+## Installation & Usage
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Venky2627/StrataAI.git
+   cd StrataAI
+   ```
+
+2. **Initialize environment:**
+   ```bash
+   python -m venv .venv
+   # Windows:
+   .venv\Scripts\activate
+   # Unix:
+   source .venv/bin/activate
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Launch Application:**
+   ```bash
+   streamlit run app.py
+   ```
+
+---
+
+*Developed by Venkatesh (Venky2627)*

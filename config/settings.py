@@ -34,8 +34,8 @@ CHROMA_DIR = DATA_DIR / "chroma_db"
 # These values are used in app.py to configure the Streamlit page.
 # Centralizing them here means the app's branding can be updated in one place.
 APP_TITLE = "StrataAI"
-APP_ICON = "🎓"
-APP_DESCRIPTION = "AI-Powered Study Assistant"
+APP_ICON = "❖"
+APP_DESCRIPTION = "Intelligence for your documents."
 
 # --- LLM Settings (Week 4+) ---
 # We define these now so the structure is ready when we integrate LLMs.
