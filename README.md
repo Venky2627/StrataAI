@@ -1,4 +1,4 @@
-# StrataAI
+P# StrataAI
 
 StrataAI is an enterprise-grade, AI-powered study assistant and document comprehension engine. Engineered with an advanced Retrieval-Augmented Generation (RAG) architecture and Agentic workflows, it enables deep analysis, dynamic querying, and automated assessment generation from complex textual data.
 
@@ -48,11 +48,11 @@ StrataAI/
 
 The development lifecycle is structured across 12 distinct implementation weeks.
 
-- **Phase 1: Foundation (Weeks 1-2)**
+- **Phase 1: Foundation (Weeks 1-2) ✅ COMPLETED**
   Environment setup, architectural routing, and document ingestion (PyMuPDF).
-- **Phase 2: Semantic Memory (Weeks 3-4)**
+- **Phase 2: Semantic Memory (Weeks 3-4) ✅ COMPLETED**
   Vector database integration, embedding models, and initial LLM synthesis.
-- **Phase 3: Core Features (Weeks 5-7)**
+- **Phase 3: Core Features (Weeks 5-7) ⏳ UP NEXT**
   Explanation generation, assessment creation, and context-aware grading.
 - **Phase 4: Agentic Systems (Weeks 8-10)**
   LangGraph integration for autonomous study planning and user progress tracking.

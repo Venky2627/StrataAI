@@ -18,6 +18,10 @@
 
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Load secure environment variables from .env
+load_dotenv()
 
 
 # --- Project Paths ---
@@ -40,7 +44,7 @@ APP_DESCRIPTION = "Intelligence for your documents."
 # --- LLM Settings (Week 4+) ---
 # We define these now so the structure is ready when we integrate LLMs.
 # Empty strings are intentional — the real values come from .env at runtime.
-GEMINI_MODEL = "gemini-2.0-flash"
+GEMINI_MODEL = "gemini-2.5-flash"
 GROQ_MODEL = "llama-3.3-70b-versatile"
 
 # --- Embedding Settings (Week 3) ---
